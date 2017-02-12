@@ -6,7 +6,7 @@
 </head>
 <body>
 @include('_header')
-
+@include('shared.messages')
 <div class="container">
     <div class="col-md-offset-1 col-md-10">
         @yield('content')

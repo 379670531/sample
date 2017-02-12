@@ -9,6 +9,7 @@
             <div class="panel-heading">
                 <h5>注册</h5>
             </div>
+            @include('shared/errors')
             <div class="panel-body">
                 <form method="POST" action="{{ route('users.store') }}">
                     <div class="form-group">
@@ -30,7 +31,7 @@
                         <label for="password_confirmation">确认密码：</label>
                         <input type="password" name="password_confirmation" class="form-control" value="{{ old('password_confirmation') }}">
                     </div>
-
+{{csrf_field()}}
                     <button type="submit" class="btn btn-primary">注册</button>
                 </form>
             </div>
